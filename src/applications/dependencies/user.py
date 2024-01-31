@@ -1,8 +1,8 @@
 from fastapi import Depends, HTTPException, status
 from core.security import JWTBearer, decode_access_token
-from queries import user as user_queries
+from applications.queries import user as user_queries
 from sqlalchemy.ext.asyncio import AsyncSession
-from dependencies.db import get_db
+from applications.dependencies.db import get_db
 from models import User
 
 
